@@ -1,0 +1,14 @@
+/venv/
+./.idea
+resources/**
+./resources
+.DS_Store
+.idea
+/resources/
+_parser.py
+/_parser.py
+**/__pycache__/
+**/__pycache__
+data/input.pdf
+data/output.json
+custom_mapping.yaml

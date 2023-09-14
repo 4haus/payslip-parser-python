@@ -1,0 +1,12 @@
+cffi==1.15.1
+charset-normalizer==3.2.0
+cryptography==41.0.2
+pdfminer.six==20220524
+pycparser==2.21
+py-pdf-parser
+dict-deep
+PyYAML
+ulid~=1.1
+flatdict~=4.0.1
+argparse
+python-magic

@@ -1,0 +1,177 @@
+mappings:
+  - property: employee.tax_id
+    location: LTR.310.716
+    default: null
+    pre: []
+    post: []
+    type: integer
+
+  - property: employee.id
+    location: LTR.42.767
+    pre: [ '.split(" ")[0]', '.strip()' ]
+    type: string
+
+  - property: employee.date_of_birth
+    location: LTR.42.767
+    pre: [ '.split(" ")[1]', '.strip()' ]
+    post: [  ]
+    type: datetime
+    arguments:
+      format: '%d%m%y'
+
+  - property: employee.tax_bracket
+    location: LTR.42.767
+    pre: [ '.split(" ")[2]', '.strip()' ]
+    type: int
+
+  - location: LTR.65.109
+    property: employee.bank_name
+
+  - property: employee.iban
+    location: LTR.65.100
+    pre: [ '.replace(" ", "")' ]
+    post: []
+    type: string
+
+  - location: LTR.60.628
+    property: employee.full_name
+
+  - location: LTR.60.618
+    property: employee.address.street
+
+  - location: LTR.60.608
+    property: employee.address.post_code
+    pre: [ '.split(" ")[0]', '.strip()']
+    type: number
+
+  - location: LTR.60.608
+    property: employee.address.locality
+    pre: [ '.split(" ", 1)[1]', '.strip()' ]
+    type: string
+
+  - location: LTR.42.750
+    property: employee.social_security_number
+    pre: ['[0:12]']
+
+  - location: LTR.179.767
+    property: employee.confession
+    type: string
+
+  - location: LTR.436.784
+    property: date
+    type: date
+    arguments:
+      format: '%d.%m.%Y'
+
+  - location: LTR.60.693
+    property: employer
+    pre: [ ]
+
+  - location: LTR.487.220
+    property: income.net
+    type: currency
+
+  - location: LTR.487.305
+    property: income.brut
+    type: currency
+
+  - location: LTR.487.288
+    property: income.tax_deductions
+    type: currency
+    arguments:
+      locale: true
+
+  - location: LTR.487.100
+    property: income.payout
+    type: currency
+
+  - location: RTL.221.156
+    property: income.statement.brut_total
+    type: currency
+
+  - location: RTL.212.156
+    property: income.statement.brut_tax
+    type: currency
+
+  - location: RTL.204.156
+    property: income.statement.income_tax
+    type: currency
+
+  - location: RTL.187.156
+    property: income.statement.solidarity_surcharge
+    type: currency
+
+  - location: LTR.54.425
+    property: bookings.[].type
+    pre: [ '.split(" ", 1)[0]' ]
+
+  - location: LTR.54.425
+    property: bookings.0.description
+    pre: [ '.split(" ", 1)[1]' ]
+
+  - location: RTL.435.270
+    property: bookings.0.unit
+    type: string
+
+  - location: RTL.435.321
+    property: bookings.0.quantity
+    type: number
+
+  - location: LTR.424.425
+    property: bookings.0.St
+    pre: [ '.split(" ", 2)[0]' ]
+
+  - location: LTR.424.425
+    property: bookings.0.SV
+    pre: [ '.split(" ", 2)[1]' ]
+
+  - location: LTR.424.425
+    property: bookings.0.GB
+    pre: [ '.split(" ", 2)[2]' ]
+
+  - location: LTR.487.425
+    property: bookings.0.amount
+    type: currency
+
+  - location: LTR.54.417
+    property: bookings.1.type
+    pre: [ '.split(" ", 1)[0]' ]
+
+  - location: LTR.54.417
+    property: bookings.1.description
+    pre: [ '.split(" ", 1)[1]' ]
+
+  - location: LTR.424.417
+    property: bookings.1.St
+    pre: [ '.split(" ", 2)[0]' ]
+
+  - location: LTR.424.417
+    property: bookings.1.SV
+    pre: [ '.split(" ", 2)[1]' ]
+
+  - location: LTR.424.417
+    property: bookings.1.GB
+    pre: [ '.split(" ", 2)[2]' ]
+
+  - location: LTR.498.417
+    property: bookings.1.amount
+    type: currency
+
+  - location: LTR.54.408
+    property: bookings.2.type
+    pre: [ '.split(" ", 1)[0]' ]
+
+  - location: LTR.54.408
+    property: bookings.2.description
+    pre: [ '.split(" ", 1)[1]' ]
+
+  - location: LTR.54.400
+    property: bookings.3.type
+    pre: [ '.split(" ", 1)[0]' ]
+
+  - location: LTR.54.400
+    property: bookings.3.description
+    pre: [ '.split(" ", 1)[1]' ]
+
+
+
