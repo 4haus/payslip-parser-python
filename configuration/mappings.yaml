@@ -78,12 +78,16 @@ mappings:
   - location: LTR.487.288
     property: income.tax_deductions
     type: currency
+    pre: [".replace('.', '')", ".replace(',', '')"]
     arguments:
       locale: true
 
   - location: LTR.487.100
     property: income.payout
     type: currency
+    pre: [".replace('.', '')", ".replace(',', '')"]
+    arguments:
+      locale: false
 
   - location: RTL.221.156
     property: income.statement.brut_total
@@ -102,75 +106,75 @@ mappings:
     type: currency
 
   - location: LTR.54.425
-    property: bookings.[].type
+    property: bookings.[0].type
     pre: [ '.split(" ", 1)[0]' ]
 
   - location: LTR.54.425
-    property: bookings.0.description
+    property: bookings.[0].description
     pre: [ '.split(" ", 1)[1]' ]
 
   - location: RTL.435.270
-    property: bookings.0.unit
+    property: bookings.[0].unit
     type: string
 
   - location: RTL.435.321
-    property: bookings.0.quantity
+    property: bookings.[0].quantity
     type: number
 
   - location: LTR.424.425
-    property: bookings.0.St
+    property: bookings.[0].St
     pre: [ '.split(" ", 2)[0]' ]
 
   - location: LTR.424.425
-    property: bookings.0.SV
+    property: bookings.[0].SV
     pre: [ '.split(" ", 2)[1]' ]
 
   - location: LTR.424.425
-    property: bookings.0.GB
+    property: bookings.[0].GB
     pre: [ '.split(" ", 2)[2]' ]
 
   - location: LTR.487.425
-    property: bookings.0.amount
+    property: bookings.[0].amount
     type: currency
 
   - location: LTR.54.417
-    property: bookings.1.type
+    property: bookings.[1].type
     pre: [ '.split(" ", 1)[0]' ]
 
   - location: LTR.54.417
-    property: bookings.1.description
+    property: bookings.[1].description
     pre: [ '.split(" ", 1)[1]' ]
 
   - location: LTR.424.417
-    property: bookings.1.St
+    property: bookings.[1].St
     pre: [ '.split(" ", 2)[0]' ]
 
   - location: LTR.424.417
-    property: bookings.1.SV
+    property: bookings.[1].SV
     pre: [ '.split(" ", 2)[1]' ]
 
   - location: LTR.424.417
-    property: bookings.1.GB
+    property: bookings.[1].GB
     pre: [ '.split(" ", 2)[2]' ]
 
   - location: LTR.498.417
-    property: bookings.1.amount
+    property: bookings.[1].amount
     type: currency
 
   - location: LTR.54.408
-    property: bookings.2.type
+    property: bookings.[2].type
     pre: [ '.split(" ", 1)[0]' ]
 
   - location: LTR.54.408
-    property: bookings.2.description
+    property: bookings.[2].description
     pre: [ '.split(" ", 1)[1]' ]
 
   - location: LTR.54.400
-    property: bookings.3.type
+    property: bookings.[3].type
     pre: [ '.split(" ", 1)[0]' ]
 
   - location: LTR.54.400
-    property: bookings.3.description
+    property: bookings.[3].description
     pre: [ '.split(" ", 1)[1]' ]
 
 
